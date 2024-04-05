@@ -1,0 +1,11 @@
+services:
+  planner:
+    container_name: latex-yearly-planner
+    build:
+      context: .
+    environment:
+      - TZ=UTC
+      # Edit these:
+      - PLANNER_YEAR=2024
+      - NAME="sn_a5x.breadcrumb.default"
+      - CFG="cfg/base.yaml,cfg/template_breadcrumb.yaml,cfg/sn_a5x.breadcrumb.default.yaml"
